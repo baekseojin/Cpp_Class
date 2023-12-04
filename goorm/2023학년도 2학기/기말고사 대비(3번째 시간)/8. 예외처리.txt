@@ -1,0 +1,77 @@
+[ 27번 - 답 확인 완료 ] 
+
+1. 예외가 발생하지 않는다. temp는 100이다.
+
+2. 예외가 발생한다. 출력 결과는 "사각형의 변수는 양수이어야 한다." temp는 0이다.
+
+
+[ 28번 - 답 확인 완료 ] 
+
+b=15
+
+
+[ 29번  - 답 확인 완료 ] 
+
+1. 
+
+try {
+	if(count <= 0) { 
+		throw count;
+	}
+	else {
+		avg = (double)sum / count;
+		cout << "합 : " << sum << "평균 : " << avg << endl; 
+	}
+
+} catch(int a) {
+	cout << a << "는 0보다 작은 값입니다." <<endl;
+}
+
+
+2. 
+
+int strToInt(const char* str) {
+	if(atoi(str) == 0) {
+		throw str;
+	}
+	else {
+		return atoi(str);
+	}
+
+}
+
+int main() {
+	int n;
+	try {
+		n = strToInt("123"); // 문자열을 정수로 변환
+		cout << "\"123\"은 정수 " << n << "로 변환됨" << endl;
+		n = strToInt("ABC12"); // 문자열을 정수로 변환
+		cout << "\"ABC12\"은 정수 " << n << "로 변환됨" << endl;
+	}
+	catch(const char* s) {
+		cout << s << "처리에서 예외 발생!!" << endl;
+		return 0;
+	}
+}
+
+
+[ 30번 - 답 확인 완료 ] 
+
+1. 5번
+
+2. 3번
+
+3. X
+
+4. 2번
+
+5. 3000
+
+6. 4번
+
+7. 3번
+
+8. 100
+
+9. 5marin
+	

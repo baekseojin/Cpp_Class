@@ -1,0 +1,65 @@
+[ 16번 - 답지 확인 함 ]
+
+Circle function called
+Shape function called
+Shape function called
+Shape function called
+
+[ 17번 - 답지 확인 함 ] 
+
+virtual void draw() = 0;
+
+[ 18번 - 답지 확인 함 ] 
+
+#include <iostream>
+using namespace std;
+
+const double PI = 3.14;
+
+class Shape {
+	protected:
+		int x, y;
+	public: 
+		Shape(int x) : x(x) { }
+		Shape(int x, int y) : x(x), y(y) { }
+		
+		virtual void drawCalc() = 0;
+	
+};
+
+class Rectangle : public Shape {
+	private:
+		int width, height; 
+	public:
+		Rectangle(int w, int h) : Shape(x, y), width(w), height(h) {}
+		void drawCalc() {
+			cout << "사각형의 넓이 : " << width * height << endl;	
+		}
+};
+
+
+class Triangle : public Shape {
+	private: 
+		int width, height;
+	public:
+		Triangle(int w, int h) : Shape(x, y), width(w), height(h) {}
+		void drawCalc() {
+			cout << "삼각형의 넓이 : " << width * height / 2 << endl;
+		}
+};
+
+class Circle : public Shape {
+	private:
+		double radius;
+	public:
+		Circle(double radius) : Shape(x), radius(x) {}
+		void drawCalc() {
+			cout << "원의 넓이 : " << PI * radius * radius << endl;		
+		}
+};
+
+ 
+
+
+		
+

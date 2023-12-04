@@ -1,0 +1,20 @@
+< 8번 > 
+
+(ㄱ) (*ptr)
+
+(ㄴ) delete
+
+
+< 9번 > 
+
+Circle::Circle(Circle &c) {
+	this -> radius = c.radius;
+}
+
+
+< 10번 > 
+
+(ㄱ) this->x = x; this->y = y;
+
+(ㄴ) CPoint point2(point1);
+

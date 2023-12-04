@@ -1,0 +1,79 @@
+[ 19번 ] 
+
+template <typename T>
+
+T sum(T x, T y) {
+	T z = x + y;
+	return z
+}
+
+
+[ 20번 - 답 확인 ㅇㅇ] 
+
+template < typename T > 
+
+class A_class {
+	T value;
+public:
+	A_Class() {}
+	void setValue(T val) {
+		value = val;
+	}
+	
+	T getValue() {
+		return value;
+	}
+	
+};
+
+
+[ 21번 - 답 확인 ㅇㅇ ] 
+
+auto campus = [](string x, string y) { 
+
+
+[ 22번 - 답 확인 ㅇㅇ ]
+ 
+1.
+ 
+template < typename T > 
+
+T totalArray(T arr[], T len) {
+	T sum=0;
+	for(int i=0; i<len; i++) {
+		sum += arr[i];
+	return sum;
+}
+
+2. 
+
+벡터 X
+
+[ 23번  - 답 확인 ㅇㅇ ] 
+
+1. 1번
+
+2. 2번
+
+3. 2번
+
+4. 4번
+
+5. 1번
+
+6. 5번
+
+7. 1번(inheritance, delegation)
+
+8. 2번(virtual, dynamic binding)
+
+9. 1번
+
+10. 순수 가상 함수, 순수 가상 클래스
+
+11. vector
+
+12. map은 원소를 key와 value의 쌍으로 저장한다. vector는 하나의 원소가 하나의 메모리 블록에 연속하게 저장된다.
+
+
+

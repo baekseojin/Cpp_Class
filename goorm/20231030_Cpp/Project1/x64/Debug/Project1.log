@@ -1,0 +1,2 @@
+﻿  server.cpp
+C:\Users\user\Desktop\2학년 전공수업\C++\goorm\20231030_Cpp\20231030_Cpp\server.cpp(35,25): error C3861: 'GetDefaultMyIP': 식별자를 찾을 수 없습니다.

@@ -1,0 +1,33 @@
+#include <WinSock2.h>
+#include <iostream>
+#pragma comment(lib, "ws2_32")
+
+int WSAStartup(WORD wVersionRequested, LPWSADATA lpWSAData);
+
+int WSACleanup(void);
+
+typedef struct WSADATA {
+    WORD    wVersion;
+    WORD    wHighVersion;
+    char    szDescription[WSADESCRIPTION_LEN + 1];
+    char    szSystemStatus[WSASYS_STATUS_LEN + 1];
+    unsigned short iMaxSockets;
+    unsigned short iMaxUdpDg;
+    char FAR* IpVendorInfo;
+} WSADATA, FAR* LPWSADATA;
+
+using namespace std;
+
+int main() {
+    WSADATA wsadata;
+    WSAStartup(MAKEWORD(2, 2), &wsadata);  
+
+    unsigned int idata = 0x12345678;
+    unsigned short sdata = 0x1234;
+
+    cout << "host:" << idata << " network:" << htonl(idata) << endl;
+    cout << "host:" << sdata << " network:" << htons(sdata) << endl;
+
+    WSACleanup();
+    return 0;
+}

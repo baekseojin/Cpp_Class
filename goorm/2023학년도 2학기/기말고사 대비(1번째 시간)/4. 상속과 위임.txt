@@ -1,0 +1,58 @@
+< 11번 > 
+
+(1) private -> public
+
+(2)
+
+class SmartPhone : public Phone, Public Music {
+	SmartPone() { 
+		cout << "스마트폰 생성자" << endl;
+	}
+	
+	~SmartPone() { 
+		cout << "스마트폰 소멸자" << endl;
+	}
+}
+
+
+
+< 12번 > 
+
+(가) : public
+(나) : protected
+(다) : private
+
+
+< 13번 > 
+
+Parent
+Child
+~Child
+~Parent
+
+
+< 14번 > 
+
+Rantangle 클래스의 모든 멤버 변수는 private로 선언했기 때문에 다른 클래스 Display에서 접근할 수 없다. 
+friend는 친구라는 뜻으로, 친구 관계를 맺으면 모든 멤버 변수에 접근할 수 있는 권한을 부여받는다. 
+따라서 Display 클래스는 Rectangle 클래스에 있는 모든 멤버 변수에 접근할 수 있게 된다.
+
+
+< 15번 > 
+
+class Student : class Person {
+	private: 
+		string university;
+	public:
+		Student(string na, int hak, string uni) : Person(na, hak) {
+			university = uni;
+		}
+		
+		void PrintShow() {
+			cout << "이름:" << name << endl;
+			cout << "학번:" << hakbun << endl;
+			cout << "학교:" << university << endl;
+	} 
+}
+
+

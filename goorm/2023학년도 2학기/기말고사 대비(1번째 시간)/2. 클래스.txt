@@ -1,0 +1,78 @@
+beginthread : 클라이언트 여러 명이 독립적으로 송수신을 할 수 있게 도와준다.
+
+
+< 3번 > 
+
+Ancestor Constructor
+ChildA Constructor
+Ancestor Constructor
+ChildA Constructor2
+Ancestor Constructor
+ChildB Constructor
+Ancestor Constructor
+ChildB Constructor2
+
+< 4번 > 
+
+반지름 10 원 생성
+반지름 50 원 생성
+반지름 50 원 소멸
+반지름 10 원 소멸
+
+< 5번 > 
+
+- 24행 : objA 객체가 생성될 때 13행의 생성자 메소드가 호출된다. 이때 13행의 생성자 메소드를 호출해야 하는데 private로 되었기 때문에 접근이 불가능하다. 
+
+- 26행 : 멤버변수 a가 private로 선언되었기 때문에 오류가 발생한다. 
+
+- 27행 : 멤버함수 a1()이 private로 선언되었기 때문에 접근이 불가능하다.
+
+< 6번 > 
+
+
+(ㄱ) count
+(ㄴ) count = 0
+
+출력결과 
+
+1
+2
+
+
+< 7번 > 
+
+(1) 
+
+class CPerson {
+	private:
+		string name;
+		int age;
+	public:
+		CPerson() { }
+		CPerson(string name, int age) {
+			this->name = name;
+			this->age = age;
+		}
+		~CPerson() { cout << "소멸자입니다"; }
+};
+
+int main() {
+	CPerson cp("홍길동", 33);
+}
+
+
+(2) 
+
+public:
+	CBank(string name, string account, int balance) {
+		this.name = name;
+		this.account = account;
+		this.balance = balance;
+	}
+	
+	void deposit(int amount) {
+		cout << "입금된 금액은" << amount << "입니다.";
+		balance += amount;
+	}
+
+}
